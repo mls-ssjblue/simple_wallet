@@ -41,8 +41,6 @@ public class WalletServiceTest {
     @Captor
     ArgumentCaptor<Coin> coinCaptor;
 
-    @Captor
-    ArgumentCaptor<Integer> integerArgumentCaptor;
 
     @Test
     public void should_insert_coins() {
