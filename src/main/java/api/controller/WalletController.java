@@ -31,7 +31,6 @@ public class WalletController {
 
     @GetMapping("/getWalletContents")
     public ResponseEntity<List<Integer>> getWalletContents() {
-        //return db contents as integers
         List<Integer> contents = walletService.getWallet();
         logger.info("Retrieved contents from wallet");
         return ResponseEntity.ok().body(contents);
@@ -39,7 +38,6 @@ public class WalletController {
 
     @PostMapping("/pay")
     public ResponseEntity<PaymentResponse> pay(@RequestParam int amount) {
-        //pay amount using cash from wallet. Deduct cash from wallet in order of low to high sequentially and return balance
         List<Integer> contents = walletService.pay(amount);
         String message = SUCCESS_MESSAGE + amount;
         PaymentResponse paymentResponse = new PaymentResponse(message, contents);
