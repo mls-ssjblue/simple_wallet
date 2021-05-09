@@ -1,4 +1,4 @@
-package api;
+package api.util;
 
 public class Constants {
     public static String SUCCESS_MESSAGE="Successfully paid " ;

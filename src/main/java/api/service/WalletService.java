@@ -2,7 +2,6 @@ package api.service;
 
 import api.exception.InsufficientFundsException;
 import api.model.Coin;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import api.repository.WalletRepository;
 
@@ -11,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static api.Constants.FAILURE_MESSAGE;
+import static api.util.Constants.FAILURE_MESSAGE;
 
 @Service
 public class WalletService {

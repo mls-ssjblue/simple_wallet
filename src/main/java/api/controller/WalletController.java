@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static api.Constants.SUCCESS_MESSAGE;
+import static api.util.Constants.SUCCESS_MESSAGE;
 
 @RestController
 public class WalletController {
