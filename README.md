@@ -9,33 +9,13 @@ Database; and
 - Through a call to the REST endpoint, pay a value (integer) (and updating the discrete cash in
 the Database)
   
-#Database Schema
+Database Schema:
+- Table: WALLET
+- Columns: id, value
 
-The entries are sorted in increasing order of value
+To Run the application: Run Main method in Application.java
 
-    id, value
-
-- Endpoint 1: GET /contents: Returns contents of wallet
-- Endpoint 2: POST /pay/{amount}
-    use case 1: pay exact without change
-    use case 2: pay with change
-  
-
-// Read all entries from db and store in object array
-sort the entries in ascending order of value
-while payment >0 {
-    if(obj.value >= 0 payment)
-        obj.value-=payment;
-        payment=0
-    else 
-        obj.value =0;
-        payment-=obj.value
-    updatedEntries.add(obj)
-}
-
-//insert updated the entries back into the db
-    for(obj in updatedEntries){
-           update the entries in db or delete if value =0
-
-    }
-}
+API:
+- POST /insert: Insert an array of coins in the wallet
+- GET /getWalletContents: Returns coins in wallet in sorted order
+- POST /pay: Pay an amount using coins from wallet, returns updated wallet contents
